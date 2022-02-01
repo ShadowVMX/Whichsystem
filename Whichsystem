@@ -1,0 +1,20 @@
+#!/bin/bash
+#MadeByShadowParrotVMX
+#If You have an error... FIREWALL ON HOST OR TARGET DOWN.
+
+echo " "
+echo "If u have an error your target is down or firewall is up ... "
+echo " "
+echo "If u think that it's up, just try arping."
+echo " "
+
+A=`timeout 1 ping -c 1 $1 | grep "64" | cut -d" " -f6 | cut -d"=" -f2` 
+
+if [ $A -le 64 ] ; then
+echo "$(tput setaf 6)Linux."
+fi
+
+if [ $A -gt 64 ] ; then
+echo "$(tput setaf 6)Windows."
+fi
+
