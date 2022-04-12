@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#Made By H4cknet <--> ShadowVMX
+#Made ShadowVMX
 #What's that machine in front of you.
 
 if [[ -z $1 ]] ; then
